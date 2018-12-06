@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Log in</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    
+    <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+    <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+  </head>
+
+  <body>
+
+  <div class="container">
+
+    <form method="post">
+      <div class="form-signin">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+          <input  id="inputMail" name="username" class="form-control" type="text" placeholder="Email" required autofocus>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          <input  id="inputPassword" name="password" class="form-control" type="password" placeholder="Password" required autofocus>
+        </div>
+
+
+        <button class="btn btn-lg btn-primary btn-block" id="loginButton">Log in <i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>
+        </button>
+        <br>
+        
+        <div id="result"></div>
+
+        <div id="errorMsg"></div>
+
+        <a href="/registrar" class="btn btn-primary">Registrarme</a>
+        {% if error%}
+        <h3>{{error}}</h3>
+        {% endif %}
+      </div>
+    </form>
+
+
+
+  </div> <!-- /container -->
+
+
+  <!-- jQuery -->
+  <script src="/static/js/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/static/js/bootstrap.min.js"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="/static/js/custom.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <div class="row">
+
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Agregar Pedidos</h2>
+      <form method="post">
+        <input type="hidden" id="costId" name="autor" value="{{idau}}">
+        <p>Medidas</p>
+        <input type="text" class="form-control" name="medidas">
+        <br>
+        <p>Color</p>
+        <textarea name="color" class="form-control" rows="2"></textarea>
+        <br>
+        <p>Indique deseada cantidad</p>
+        <input type="text" class="form-control" name="cantidad">
+      
+        <button type="submit">Finalizar y añadir</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+body{
+	background-image: url("../img/cuesta.JPG");
+	width: 100%;
+	height: auto;
+	margin: 2em 0 2em 0
+}
+
+.title{
+	color: black;
+	background-color: #54C6C0;
+	
+	padding: 10px;
+}
+.bienvenida{
+	color: black;
+	background-color: #0000FF;
+	
+}
+.bienvenida .login{
+	padding-top: 20px;
+	
+}
+.boton {
+	color: #0000FF;
+	padding: 5px;
+
+}
+.post{
+	background-color: #0000FF;
+	padding: 10px;
+	margin: 2px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
